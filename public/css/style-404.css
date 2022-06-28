@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+.page_404 {
+  padding: 100px 0;
+  background: #fff;
+  font-family: "Poppins";
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+  background: url("https://media4.giphy.com/media/lqFHf5fYMSuKcSOJph/giphy.gif?cid=790b76112a02baf4005503436e615df621cb811055b65de5&rid=giphy.gif&ct=g");
+  height: 300px;
+  width: 24.5rem;
+  background-position: center;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h3 {
+  font-size: 80px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: #20c997;
+  display: inline-block;
+  border-radius: 5rem;
+}
+
+.content_box_404 {
+  margin-top: -50px;
+}
+a:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #087f5b;
+}

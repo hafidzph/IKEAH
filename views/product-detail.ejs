@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style-detail.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+
+
+    <title>Product Detail</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top"
+      style="background-color: #087f5b"
+    >
+      <div class="container" style="font-weight: bold">
+        <a class="navbar-brand" href="/dashboard">IKEAH</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/products">Product</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <div class="dropdown">
+                <a
+                  class="btn btn-outline-light dropdown-toggle username"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >Halo, <%= user.username %></a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li>
+                    <a class="dropdown-item" href="/product/mycart"
+                      >My Cart</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+      <div class="container">
+        <div class="row justify-content-center pt-3 pb-3">
+          <div class="col-md d-flex justify-content-end me-3">
+            <img
+              src="<%= data.image %> "
+              class="card-img-top product-img shadow img-thumbnail "
+              alt="chair-product-1"
+            />
+          </div>
+          <div class="col-md-4">
+            <h1 class="fw-bold product-title"><%= data.product_name %></h1>
+            <p class="fw-bold fs-3 mb-5 price">$<%= data.price %></p>
+            <h2 class="fw-bold mb-3">Color</h2>
+            <div class="d-flex align-items-center mb-3 ">
+              <div class="col-sm-1 al text-center me-3">
+                <label class="radio-button">
+                  <input type="radio" name="radio-color"  class="color-check" />
+                  <span class="checkmark bg-danger shadow"></span>
+                </label>
+              </div>
+              <div class="col-sm-1 text-center me-3">
+                <label class="radio-button">
+                  <input type="radio" name="radio-color" value="blue" class="color-check" />
+                  <span class="checkmark bg-primary shadow"></span>
+                </label>
+              </div>
+              <div class="col-sm-1 text-center me-3">
+                <label class="radio-button">
+                  <input type="radio" name="radio-color" value="yellow" class="color-check"/>
+                  <span class="checkmark bg-warning "></span>
+                </label>
+              </div>
+              <div class="col-sm-1 text-center">
+                <label class="radio-button">
+                  <input type="radio" name="radio-color" value="green" class="color-check" />
+                  <span class="checkmark bg-success shadow"></span>
+                </label>
+              </div>
+      
+            </div>
+            <div class="row d-flex justify-content-start ">
+              <div class="col-md-9 mt-4 ms-2 mb-3 border border-dark ps-3 rounded-1 shadow-sm w-75">
+                <button type="button" class="btn btn-md mb-1 me-3 button-min">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-dash-lg"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"
+                    />
+                  </svg>
+                </button>
+                <input
+                  disabled
+                  type="text"
+                  value="2"
+                  class="text-center value fs-3 fw-bold w-50 mt-1 amount"
+                />
+                <button type="button" class="btn btn-md mb-1 ms-2 button-add">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus-lg"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"
+                    />
+                  </svg>
+              </div>
+              <div class="col-md mt-3" style="margin-left: -5px;">
+                <button type="submit" class="btn-buy btn-success btn-lg w-75  button-confirm">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#20c997" fill-opacity="1" d="M0,32L0,160L1440,160L1440,320L0,320L0,320Z"></path></svg>    </section>
+
+    <!-- Description Product -->
+    <section class="description-product">
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-md">
+            <h1>Description Product</h1>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-8">
+            <p><%= data.desc %> </p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md">
+            <h1>Advantage Product</h1>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md">
+            <ul>
+              <li>
+                <p class="fs-4 fw-bold"><%= data.advantage %> </p>
+              </li>
+              <li>
+                <p class="fs-4 fw-bold"><%= data.material %> </p>
+              </li>
+              <li>
+                <p class="fs-4 fw-bold"><%= data.weight %> </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,64L0,128L1440,128L1440,320L0,320L0,320Z"></path></svg>    
+    </section>
+
+    <section class="related-product">
+      <div class="container">
+        <div class="row">
+          <div class="col-md mb-5 ms-5">
+            <h1>Related Products</h1>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-sm d-flex justify-content-center">
+            <div class="card rounded-3 shadow mb-5" style="width: 18rem">
+              <img
+                src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80"
+                class="card-img-top image-product"
+                alt="chair-product-1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Naomi Hebert</h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Comfortable for 4h</span>
+                </li>
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Vegan leather</span>
+                </li>
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    />
+                  </svg>
+                  <span>Weighs 16 kg</span>
+                </li>
+              </ul>
+              <div class="card-body d-flex align-items-center">
+                <div class="col text-start">
+                  <span class="fs-5">
+                    <strong>1.200.000</strong>
+                  </span>
+                </div>
+                <div class="col text-end">
+                  <a href="#" class="btn ms-auto">Add to Chart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm d-flex justify-content-center">
+            <div class="card border rounded-3 shadow mb-5" style="width: 18rem">
+              <img
+                src="https://images.unsplash.com/photo-1573866926487-a1865558a9cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                class="card-img-top"
+                alt="chair-product-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hal Gatewood</h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Comfortable for 8h</span>
+                </li>
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Organic Cotton</span>
+                </li>
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    />
+                  </svg>
+                  <span>Weighs 20 kg</span>
+                </li>
+              </ul>
+              <div class="card-body d-flex align-items-center">
+                <div class="col text-start">
+                  <span class="fs-5">
+                    <strong>1.750.000</strong>
+                  </span>
+                </div>
+                <div class="col text-end">
+                  <a href="#" class="btn ms-auto">Add to Chart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm d-flex justify-content-center">
+            <div class="card border rounded-3 shadow mb-5" style="width: 18rem">
+              <img
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                class="card-img-top"
+                alt="chair-product-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Green Fabric</h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Comfortable for 24h</span>
+                </li>
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Vegan Leather</span>
+                </li>
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    />
+                  </svg>
+                  <span>Weighs 15 kg</span>
+                </li>
+              </ul>
+              <div class="card-body d-flex align-items-center">
+                <div class="col text-start">
+                  <span class="fs-5">
+                    <strong>2.500.000</strong>
+                  </span>
+                </div>
+                <div class="col text-end">
+                  <a href="#" class="btn ms-auto">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#087f5b"
+          fill-opacity="1"
+          d="M0,64L0,224L1440,224L1440,320L0,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-light fs-6 fw-bold">
+      <p>Copyright 2022 IKEAH.</p>
+      <p>All Right Reserved.</p>
+    </footer>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/events.js"></script>
+  </body>
+</html>

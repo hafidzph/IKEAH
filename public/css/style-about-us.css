@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+body p {
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+body h1 {
+  font-weight: bold;
+  font-size: 44px;
+  letter-spacing: -1px;
+}
+
+.aboutus {
+  padding-top: 7rem;
+}
+
+.contact {
+  background-color: #20c997;
+}
+
+footer {
+  background-color: #087f5b;
+  padding-bottom: 10px;
+  padding-top: 50px;
+}

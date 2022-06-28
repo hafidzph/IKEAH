@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+body p {
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+body h1 {
+  font-weight: bold;
+  font-size: 44px;
+  letter-spacing: -1px;
+}
+
+.product-detail {
+  padding-top: 8rem;
+}
+
+.product-img {
+  width: 50rem;
+  height: auto;
+  border-radius: 30px;
+}
+
+.radio-button {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #444;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-button .checkmark {
+  width: calc(100% - 6.5px);
+  height: calc(100% - 6.5px);
+  border-radius: 50%;
+  background-color: black;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.radio-button input {
+  display: none;
+}
+
+.radio-button input:checked + .checkmark {
+  opacity: 1;
+}
+
+.product-detail .btn:link,
+.product-detail .btn:visited {
+  background-color: white;
+  width: 100%;
+}
+
+.product-detail .btn:hover,
+.product-detail .btn:active {
+  background-color: rgb(107, 105, 105);
+}
+
+.product-detail .value {
+  border: none;
+  width: 12.5rem;
+}
+
+.product-detail .btn-buy {
+  width: 21rem;
+}
+
+.description-product {
+  background-color: #20c997;
+  color: white;
+}
+
+.related-product .chair-icon {
+  stroke: #087f5b;
+  width: 24px;
+  height: 24px;
+}
+
+.related-product .btn:link,
+.related-product .btn:visited {
+  background-color: #087f5b;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 13.5px;
+  padding: 8px 12px;
+}
+
+.related-product .btn:hover,
+.related-product .btn:active {
+  background-color: #099268;
+}
+
+footer {
+  background-color: #087f5b;
+  padding: 10px;
+}

@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+body p {
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+body h1 {
+  font-weight: bold;
+  font-size: 44px;
+  letter-spacing: -1px;
+}
+
+body span {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.7;
+}
+
+.cart {
+  padding-top: 6rem;
+  background-color: #20c997;
+}
+
+.cart .chart-item {
+  border-radius: 10px;
+}
+
+.cart .keranjang {
+  border-radius: 15px;
+}
+
+.cart .img-keranjang {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.cart .value {
+  width: 28px;
+  border: none;
+}
+
+.cart .btn:link,
+.cart .btn:visited {
+  background-color: white;
+}
+
+.cart .btn:hover,
+.cart .btn:active {
+  background-color: rgb(107, 105, 105);
+}
+
+.cart .circle {
+  fill: red;
+}
+
+.cart .total {
+  width: 100px;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+}
+
+footer {
+  background-color: #087f5b;
+  padding: 10px;
+}

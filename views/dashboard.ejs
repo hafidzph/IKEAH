@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>IKEAH</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top"
+      style="background-color: #087f5b"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="/dashboard" style="font-weight: bold"
+          >IKEAH</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/products">Products</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <div class="dropdown">
+                <a
+                  class="btn btn-outline-light dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Halo, <%= user.username %>
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li>
+                    <a class="dropdown-item" href="product/mycart">Keranjang</a>
+                  </li>
+                  <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Jumbotron -->
+
+    <section class="jumbotron">
+      <div class="container">
+        <div class="row justify-content-around">
+          <div class="col-sm slide-right text-start mt-5">
+            <h1 class="display-4 mt-2 mb-3 fw-bold">Welcome to IKEAH</h1>
+            <p class="fst-italic fs-6">
+              A site where you can find your favorite furniture items at
+              affordable prices. You have got very good quality furniture here
+              so you don't have to worry about damage to the items you just
+              bought because Ikea uses good materials and also gets a warranty
+              by us for 6 months if there is damage/defective item that you get
+              can be exchanged for a new one.
+            </p>
+          </div>
+          <div class="col-sm text-center">
+            <img
+              src="image/madalena-veloso-rjhAiP3cj9E-unsplash.jpg"
+              alt=""
+              width="80%"
+              class="img-thumbnail chair mt-5 rounded-3"
+            />
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffff"
+          fill-opacity="1"
+          d="M0,96L26.7,90.7C53.3,85,107,75,160,96C213.3,117,267,171,320,192C373.3,213,427,203,480,186.7C533.3,171,587,149,640,149.3C693.3,149,747,171,800,186.7C853.3,203,907,213,960,197.3C1013.3,181,1067,139,1120,133.3C1173.3,128,1227,160,1280,186.7C1333.3,213,1387,235,1413,245.3L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+          class="col-sm"
+        ></path>
+      </svg>
+    </section>
+
+    <!-- PRoduct Advantages -->
+    <section class="product-advantages">
+      <div class="container">
+        <div class="row text-center mb-5">
+          <h1 class="fw-bold mb-5">What makes our products better</h1>
+        </div>
+        <div class="row justify-content-between">
+          <div class="col-md-3 mb-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 features-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+            <p class="features-title">Made with love</p>
+
+            <p class="features-text">
+              From the hands of professionals our products are made gently and
+              sincerely with their hearts so as to make our products the most
+              loved
+            </p>
+          </div>
+          <div class="col-md-3 mb-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="features-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <p class="features-title">Extremely Comfort</p>
+
+            <p class="features-text">
+              With good ingredients contained in our products, we make our
+              products comfortable for your family at home
+            </p>
+          </div>
+          <div class="col-md-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 features-icon"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+              />
+            </svg>
+            <p class="features-title">Environmentally friendly</p>
+
+            <p class="features-text">
+              The materials used in our products are eco-friendly materials such
+              as vegan leather, organic leather, etc. so we don't have to worry
+              about damaging nature.
+            </p>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#20c997"
+          fill-opacity="1"
+          d="M0,320L0,224L1440,224L1440,320L0,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <!-- Sponsor -->
+    <section class="sponsor">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <h1 class="fw-bold text-light">Our Sponsor</h1>
+        </div>
+        <div class="row justify-content-center pt-5">
+          <div class="col-md mb-5">
+            <img
+              src="image/logo-shopee-png-images-download-shopee-1.png"
+              alt="shopee"
+              class="center-block"
+              width="100%"
+            />
+          </div>
+          <div class="col-md mb-5">
+            <img
+              src="image/AZ_Logo_Twitter_438x220px.png"
+              alt="allianz"
+              class="center-block mt-4"
+              width="100%"
+              height="50"
+            />
+          </div>
+          <div class="col-md mb-5">
+            <img
+              src="image/Ikea_logo.svg.png"
+              alt="ikea"
+              class="center-block"
+              width="100%"
+              height="100"
+            />
+          </div>
+          <div class="col-md">
+            <img
+              src="image/bklpk.png"
+              alt="bukalapak"
+              class="center-block"
+              width="100%"
+              height="100"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section class="testimoni">
+      <div class="container">
+        <div class="row text-center mb-5">
+          <div class="col mb-5 mt-5">
+            <h1 class="fw-bolder mt-5">Testimonial</h1>
+          </div>
+        </div>
+        <div class="row justify-content-center testi1">
+          <div class="col-sm text-center">
+            <img
+              src="image/285948072_690158932073581_7726438080712838218_n.jpg"
+              alt="yaman"
+              class="img-thumbnail mb-5"
+              width="35%"
+              height="auto"
+            />
+          </div>
+          <div class="col-sm-6 mt-2">
+            <h2 class="fw-bold mb-4">
+              "This is the best website i have ever seen"
+            </h2>
+            <p class="mb-4">
+              This is a good websita you can visit Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Veritatis tenetur repudiandae
+              accusamus animi vitae repellendus voluptates, hic nesciunt magni
+              excepturi nemo explicabo consequuntur veniam odit odio magnam cum
+              vel ipsum!
+            </p>
+            <h5 class="fw-bold">- Mas Yaman</h5>
+          </div>
+        </div>
+        <div class="row text-end mt-5 flex-column-reverse flex-sm-row">
+          <div class="text col-sm-6 mt-2 content-text">
+            <h2 class="fw-bold mb-4">
+              "This website can help me to find anything furniture i want."
+            </h2>
+            <p class="mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+              quas ea rem possimus modi, dolores explicabo fugit, dignissimos,
+              voluptates ipsa odit obcaecati. Ex, iusto ipsa.
+            </p>
+            <h5 class="fw-bold">- Mas Raply</h5>
+          </div>
+          <div class="col-sm text-center content-image">
+            <img
+              src="image/285194878_769495654416058_6874540124986262349_n.jpg"
+              alt="raply"
+              class="img-thumbnail mb-5 circle-image"
+              width="35%"
+              height="auto"
+            />
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,64L0,224L1440,224L1440,320L0,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <!-- Product -->
+    <section class="product">
+      <div class="container">
+        <div class="row text-center mb-5">
+          <div class="col mb-5">
+            <h1 class="fw-bolder">Our Bestselling Products</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm d-flex justify-content-center">
+            <div class="card rounded-3 shadow mb-5" style="width: 18rem">
+              <img
+                src="<%= data.image %>"
+                class="card-img-top"
+                alt="chair-product-1"
+              />
+              <div class="card-body">
+                <h5 class="card-title"><%= data.product_name %></h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span><%= data.advantage %> </span>
+                </li>
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span><%= data.material %> </span>
+                </li>
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    />
+                  </svg>
+                  <span>Weighs <%= data.weight %> </span>
+                </li>
+              </ul>
+              <div class="card-body d-flex align-items-center">
+                <div class="col text-start">
+                  <span class="fs-5">
+                    <strong>$<%= data.price %> </strong>
+                  </span>
+                </div>
+                <div class="col text-end">
+                  <a href="#" class="btn ms-auto">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm d-flex justify-content-center">
+            <div class="card border rounded-3 shadow mb-5" style="width: 18rem">
+              <img
+                src="https://images.unsplash.com/photo-1573866926487-a1865558a9cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                class="card-img-top"
+                alt="chair-product-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hal Gatewood</h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Comfortable for 8h</span>
+                </li>
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Organic Cotton</span>
+                </li>
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    />
+                  </svg>
+                  <span>Weighs 20 kg</span>
+                </li>
+              </ul>
+              <div class="card-body d-flex align-items-center">
+                <div class="col text-start">
+                  <span class="fs-5">
+                    <strong>$1000</strong>
+                  </span>
+                </div>
+                <div class="col text-end">
+                  <a href="#" class="btn ms-auto">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm d-flex justify-content-center">
+            <div class="card border rounded-3 shadow mb-5" style="width: 18rem">
+              <img
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                class="card-img-top"
+                alt="chair-product-2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Green Fabric</h5>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Comfortable for 24h</span>
+                </li>
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>Vegan Leather</span>
+                </li>
+                <li class="list-group-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chair-icon"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    />
+                  </svg>
+                  <span>Weighs 15 kg</span>
+                </li>
+              </ul>
+              <div class="card-body d-flex align-items-center">
+                <div class="col text-start">
+                  <span class="fs-5">
+                    <strong>$1200</strong>
+                  </span>
+                </div>
+                <div class="col text-end">
+                  <a href="#" class="btn ms-auto">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#087f5b"
+          fill-opacity="1"
+          d="M0,64L0,224L1440,224L1440,320L0,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-light fs-6">
+      <p>Copyright 2022 IKEAH.</p>
+      <p>All Right Reserved.</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

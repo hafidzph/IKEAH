@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+body span {
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+body h1 {
+  font-weight: bold;
+  font-size: 44px;
+  letter-spacing: -1px;
+}
+
+.add-product {
+  padding-top: 7rem;
+  background: url("https://cdn.dribbble.com/users/616823/screenshots/2263316/testrocket.gif");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: initial;
+}
+
+.add-product .btn,
+.add-product .btn:visited {
+  background-color: #087f5b;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 15px;
+}
+
+.add-product .btn:hover,
+.add-product .btn:active {
+  background-color: #099268;
+}
+
+footer {
+  background-color: #087f5b;
+  padding: 9px;
+}

@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+body h1 {
+  font-size: 44px;
+  letter-spacing: -1px;
+}
+
+body p {
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+.jumbotron {
+  color: #fff;
+  background-color: #20c997;
+  padding-top: 3rem;
+}
+
+.product-advantages .features-icon {
+  stroke: #087f5b;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+}
+
+.product-advantages .features-title {
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.sponsor {
+  background-color: #20c997;
+}
+
+.testimoni {
+  background-color: #20c997;
+  color: #fff;
+}
+
+.testimoni img {
+  border-radius: 10%;
+}
+
+.product .chair-icon {
+  stroke: #087f5b;
+  width: 24px;
+  height: 24px;
+}
+
+.product .btn:link,
+.product .btn:visited {
+  background-color: #087f5b;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.product .btn:hover,
+.product .btn:active {
+  background-color: #099268;
+}
+
+footer {
+  background-color: #087f5b;
+  padding: 10px;
+}

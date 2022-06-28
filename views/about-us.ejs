@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style-about-us.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top"
+      style="background-color: #087f5b"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="/" style="font-weight: bold">IKEAH</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/products">Products</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <% if (user?.username) { %>
+              <div class="dropdown">
+                <a
+                  class="btn btn-outline-light dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Halo, <%= user.username %>
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li>
+                    <a class="dropdown-item" href="product/mycart">My Cart</a>
+                  </li>
+                  <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                </ul>
+              </div>
+              <% }else { %>
+
+              <a class="nav-link" href="/login">Masuk</a>
+              <% } %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About Us -->
+    <section class="aboutus">
+      <div class="container">
+        <div class="row">
+          <div class="col-md text-center">
+            <h1>IKEAH</h1>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-8 text-center">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Explicabo voluptas nostrum quidem, temporibus sunt atque. Ipsum
+              pariatur nihil cumque aut vel enim est voluptates repudiandae,
+              aliquam eos necessitatibus iure sit neque eveniet. Aliquam
+              consequuntur commodi ad dignissimos aliquid neque provident porro
+              ullam illum cum, non placeat. Rem beatae cumque corrupti sequi
+              porro! Aliquid omnis quo, optio corrupti fugiat error officiis
+              amet suscipit, quia, illo quae nostrum ut asperiores aperiam. Esse
+              expedita voluptatibus placeat eligendi. Impedit, odio deserunt
+              incidunt delectus quisquam accusantium. Temporibus dolores autem
+              nobis, sapiente expedita dignissimos laboriosam voluptates ullam
+              numquam amet corporis laudantium laborum quam ab id adipisci!
+            </p>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#20c997"
+          fill-opacity="1"
+          d="M0,96L26.7,90.7C53.3,85,107,75,160,96C213.3,117,267,171,320,192C373.3,213,427,203,480,186.7C533.3,171,587,149,640,149.3C693.3,149,747,171,800,186.7C853.3,203,907,213,960,197.3C1013.3,181,1067,139,1120,133.3C1173.3,128,1227,160,1280,186.7C1333.3,213,1387,235,1413,245.3L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+          class="col-sm"
+        ></path>
+      </svg>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-sm-3 text-light">
+            <h4>Contact</h4>
+            <ul>
+              <li>
+                <p>(+21) 13141412</p>
+              </li>
+              <li>
+                <p>(+62) 8124263628327</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3 text-light">
+            <h4 class="mb-2">Email</h4>
+            <p>ikeahcommerce@gmail.com</p>
+          </div>
+          <div class="col-sm-3 text-light">
+            <h4>Our Store</h4>
+            <p>Mangroove Street Number 16 RT 69/069</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center text-light fs-6">
+      <p>Copyright 2022 IKEAH.</p>
+      <p>All Right Reserved.</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
